@@ -5,21 +5,21 @@
 class Pulse < Formula
   desc "Read your Pulse analytics from the terminal"
   homepage "https://ciphera.net/products/pulse"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.0.0/pulse_1.0.0_darwin_amd64.tar.gz"
-      sha256 "62bb0b39198669f22d1c02e0646e4a301fbbd851a8438e42c8ba10f2094166b2"
+      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.1.0/pulse_1.1.0_darwin_amd64.tar.gz"
+      sha256 "8af40859446f3fee81d65f085e2c95261fd95a97e1331d49370d9a537c2d9e24"
 
       define_method(:install) do
         bin.install "pulse"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.0.0/pulse_1.0.0_darwin_arm64.tar.gz"
-      sha256 "5907c96c807309ef10ac6130caf6f121c9c56f37ee9acbbaa731ebc929e9db72"
+      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.1.0/pulse_1.1.0_darwin_arm64.tar.gz"
+      sha256 "fd939fb41edc263a900e018e0983aab94434dedb0e47d183e2eba6b2a17eb6a0"
 
       define_method(:install) do
         bin.install "pulse"
@@ -29,15 +29,15 @@ class Pulse < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.0.0/pulse_1.0.0_linux_amd64.tar.gz"
-      sha256 "cda033060a3c50ca844d4c91b3934109010924dbd760259abd4fadb8977509df"
+      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.1.0/pulse_1.1.0_linux_amd64.tar.gz"
+      sha256 "fd16e2bd7ce6204d1fde100b6c0ad14268e203839f9f97eda822a5e157c26df9"
       define_method(:install) do
         bin.install "pulse"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.0.0/pulse_1.0.0_linux_arm64.tar.gz"
-      sha256 "382362c789c77d5cdec2f8251909bcc9a13f2d57cf07a12dfb965f6619dc0441"
+      url "https://github.com/ciphera-net/pulse-cli/releases/download/v1.1.0/pulse_1.1.0_linux_arm64.tar.gz"
+      sha256 "0a8e4d25e8870bd1d0f502e1c352defc04009d9b4aaf9725d23af72711e7b8bb"
       define_method(:install) do
         bin.install "pulse"
       end
